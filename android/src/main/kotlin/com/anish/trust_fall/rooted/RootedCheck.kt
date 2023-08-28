@@ -20,21 +20,22 @@ object RootedCheck {
         } else {
             LessThan23()
         }
-        return check.checkRooted() || rootBeerCheck(context)
+//        return check.checkRooted() || rootBeerCheck(context)
+        return check.checkRooted()
     }
 
-    @Suppress("DEPRECATION")
-    private fun rootBeerCheck(context: Context?): Boolean {
-        val rootBeer = RootBeer(context)
-        val rv: Boolean =
-            if (Build.BRAND.contains(ONEPLUS) || Build.BRAND.contains(MOTO) || Build.BRAND.contains(
-                    XIAOMI
-                )
-            ) {
-                rootBeer.isRootedWithoutBusyBoxCheck
-            } else {
-                rootBeer.isRooted
-            }
-        return rv
-    }
+//    @Suppress("DEPRECATION")
+//    private fun rootBeerCheck(context: Context?): Boolean {
+//        val rootBeer = RootBeer(context)
+//        val rv: Boolean =
+//            if (Build.BRAND.contains(ONEPLUS) || Build.BRAND.contains(MOTO) || Build.BRAND.contains(
+//                    XIAOMI
+//                )
+//            ) {
+//                rootBeer.isRootedWithoutBusyBoxCheck
+//            } else {
+//                rootBeer.isRooted
+//            }
+//        return rv
+//    }
 }
